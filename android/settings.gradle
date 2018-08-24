@@ -1,0 +1,3 @@
+rootProject.name = 'ConnectToAndr'
+
+include ':app'

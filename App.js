@@ -9,6 +9,7 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import FetchLocation from './components/FetchLocation';
+import UsersMap from './compontents/UsersMap';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -31,10 +32,11 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>Booya Bitches!!</Text>
-        <Text style={styles.instructions}>Holy Fucking Shit is this working!?!?!?</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+        <Text style={styles.welcome}>Spokes</Text>
+        <Text style={styles.instructions}>Let us help you get there safely!</Text>
+        {/* <Text style={styles.instructions}>{instructions}</Text> */}
         < FetchLocation onGetLocation={this.getUserLocationHandler} />
+        <UsersMap />
       </View>
     );
   }
@@ -45,16 +47,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#FFF272',
   },
   welcome: {
-    fontSize: 20,
+    fontSize: 50,
+    fontWeight: 'bold',
     textAlign: 'center',
     margin: 10,
+    color: 'magenta',
   },
   instructions: {
+    fontSize: 20,
     textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
+    color: 'black',
+    marginBottom: 20,
   },
 });

@@ -1,22 +1,9 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View} from 'react-native';
 import FetchLocation from './components/FetchLocation';
 import UsersMap from './components/UsersMap';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
 
 const Props = {};
 export default class App extends React.Component {
@@ -34,7 +21,6 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text style={styles.welcome}>Spokes</Text>
         <Text style={styles.instructions}>Let us help you get there safely!</Text>
-        {/* <Text style={styles.instructions}>{instructions}</Text> */}
         < FetchLocation onGetLocation={this.getUserLocationHandler} />
         <UsersMap />
       </View>
